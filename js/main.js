@@ -42,6 +42,20 @@ $(function () {
           slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        },
+      },
     ],
   });
 
@@ -62,6 +76,14 @@ $(function () {
         breakpoint: 900,
         settings: {
           slidesToShow: 2,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
         },
       },
     ],
@@ -69,7 +91,7 @@ $(function () {
 
   $(".holder__slider, .shop__slider").slick({
     infinite: true,
-    fade: true,
+    // fade: true,
     prevArrow:
       '<img class="slider-arrows slider-arrows__left " src="images/arrows-left.svg" alt="arrows"></img>',
     nextArrow:
@@ -144,4 +166,6 @@ $(function () {
   $(".menu-btn").on("click", function () {
     $(".menu").toggleClass("active");
   });
+
+  new WOW().init();
 });
